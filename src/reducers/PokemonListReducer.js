@@ -10,31 +10,41 @@ const PokemonListReducer = (state = initialState, action) => {
         case "POKEMON_LIST_LOADING":
             return {
                 ...state, loading: true, error: ''
-            }
+            };
 
-            case "POKEMON_LIST_ERROR":
-                return {
-                    ...state, loading: false, error: "PokemonList error"
-                }
+        case "POKEMON_LIST_ERROR":
+            return {
+                ...state, loading: false, error: "PokemonList error"
+            };
 
-                case "POKEMON_LIST_SUCCESS":
-                    return {
-                        ...state, loading: false, data: action.payload, error: ''
-                    }
-                    case "SINGLE_POKEMON_SUCCESS":
-                        return {
+        case "POKEMON_LIST_SUCCESS":
+            return {
+                ...state, /* loading: false, */ data: action.payload, error: ''
+            };
+        case "SINGLE_POKEMON_SUCCESS":
+            return {
 
-                            ...state, loading: false, details: [...state.details, action.payload], error: ''
-                        }
+                ...state, /*  loading: false,  */ details: [...state.details, action.payload], error: ''
+            };
+        case "SINGLE_POKEMON_ERROR":
+            return {
+                ...state, loading: false, error: "Single pokemon error error"
+            };
+        case "POKEMONS_LOADED":
+            return {
+
+                ...state, loading: false, error: ''
+            };
 
 
-                        case "RESET_DETAILS":
-                            return {
-                                ...state, details: []
-                            }
 
-                            default:
-                                return state
+        case "RESET_DETAILS":
+            return {
+                ...state, details: []
+            };
+
+        default:
+            return state
     }
 }
 

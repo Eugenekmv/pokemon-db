@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-
-import CardContent from "@material-ui/core/CardContent";
-import { pink } from "@material-ui/core/colors";
-import Typography from "@material-ui/core/Typography";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Avatar, Chip, Fade } from "@material-ui/core";
+
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  CardActionArea,
+  CardContent,
+  Card,
+  Avatar,
+  Chip,
+  Fade,
+  Typography,
+} from "@material-ui/core";
+import { pink } from "@material-ui/core/colors";
 
 import * as pics from "../imgs/index";
 
@@ -39,17 +43,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PokeCard({ details }) {
   const classes = useStyles();
-  // console.log(details);
-
-  useEffect(() => {}, []);
 
   return (
-    <Fade in={details}>
+    <Fade in={details && true}>
       <Card raised className={classes.root}>
         <CardActionArea
           className={classes.title}
           component={Link}
-          to={`/pokemon/${details.name}/`}>
+          to={`/pokemon-db/pokemon/${details.name}/`}>
           <Avatar
             width={1 / 2}
             alt="Remy Sharp"
@@ -68,6 +69,7 @@ export default function PokeCard({ details }) {
             <div className="">
               {details.types.map((type) => (
                 <Chip
+                  key={type.type.name}
                   className={classes.chip}
                   avatar={
                     <Avatar alt="Remy Sharp" src={pics[type.type.name]} />

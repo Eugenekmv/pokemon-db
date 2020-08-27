@@ -1,14 +1,13 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import "./App.css";
-import Home from "./components/Home";
-import Pokemon from "./components/Pokemon";
+
+import Routing from "./routing/Routing";
 import Navbar from "./components/Navbar";
+
+import "./App.css";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import pink from "@material-ui/core/colors/pink";
-import green from "@material-ui/core/colors/green";
+import { pink, green } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
@@ -19,21 +18,18 @@ const theme = createMuiTheme({
       main: green[500],
     },
     background: {
-      default: "#333",
+      default: "#EDEBEA",
     },
   },
 });
+
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Navbar />
-        <Switch>
-          <Route path="/:page" exact component={Home} />
-          <Route path="/pokemon/:pokemon" exact component={Pokemon} />
-          <Redirect to="/1" />
-        </Switch>
+        <Routing />
       </ThemeProvider>
     </div>
   );

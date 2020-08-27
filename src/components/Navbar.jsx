@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { useHistory, Link } from "react-router-dom";
 
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  InputBase,
+  Button,
+  SvgIcon,
+} from "@material-ui/core";
+import { fade, makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
-import { Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
-import SvgIcon from "@material-ui/core/SvgIcon";
-import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -90,7 +91,7 @@ export default function Navbar() {
   };
 
   const handleHome = () => {
-    history.push("/1");
+    history.push("/pokemon-db/1");
   };
 
   return (
@@ -126,7 +127,7 @@ export default function Navbar() {
               className={classes.searchBtn}
               onClick={handleBtn}
               component={Link}
-              to={`/pokemon/${name}`}>
+              to={`/pokemon-db/pokemon/${name}`}>
               Search
             </Button>
           </div>

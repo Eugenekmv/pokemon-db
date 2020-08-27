@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Pagination from "@material-ui/lab/Pagination";
+import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
+
+import { makeStyles } from "@material-ui/core/styles";
+import { Pagination } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,12 +22,13 @@ export default function PokePagination({ FetchData, count }) {
 
   const [currentPage, setCurrentPage] = useState(page || 1);
 
-  const handleChange = (e, v) => {
-    setCurrentPage(v);
-    FetchData(v);
-    history.push(`/${v}`);
-    console.log(page);
-  };
+  useEffect(() => {
+    if (currentPage !== page) {
+      FetchData(currentPage);
+      history.push(`/pokemon-db/${currentPage}`);
+      console.log(currentPage);
+    }
+  });
 
   return (
     <div className={classes.root}>
@@ -34,7 +36,7 @@ export default function PokePagination({ FetchData, count }) {
         count={Math.ceil(count / 12 - 1)}
         page={parseInt(currentPage, 10)}
         color="primary"
-        onChange={handleChange}
+        onChange={(e, p) => setCurrentPage(p)}
       />
     </div>
   );

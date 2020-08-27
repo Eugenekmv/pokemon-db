@@ -16,17 +16,25 @@ export const GetPokemonList = (page) => dispatch => {
 }
 
 const GetPokeDetails = (data) => dispatch => {
-    dispatch({
-        type: "RESET_DETAILS"
-    })
-    dispatch({
-        type: "POKEMON_LIST_SUCCESS",
-        payload: data
-    });
-    data.results.map(a => axios.get(a.url).then(data => dispatch({
-        type: "SINGLE_POKEMON_SUCCESS",
-        payload: data.data
-    })))
+    try {
+        dispatch({
+            type: "RESET_DETAILS"
+        })
+        dispatch({
+            type: "POKEMON_LIST_SUCCESS",
+            payload: data
+        });
+        data.results.map(a => axios.get(a.url).then(data => dispatch({
+            type: "SINGLE_POKEMON_SUCCESS",
+            payload: data.data
+        })).then(dispatch({
+            type: "POKEMONS_LOADED"
+        })))
+    } catch (e) {
+        dispatch({
+            type: 'SINGLE_POKEMON_ERROR'
+        })
+    }
 
 }
 
