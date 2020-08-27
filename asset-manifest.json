@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/pokemon-db/static/css/main.5f361e03.chunk.css",
+    "main.js": "/pokemon-db/static/js/main.8afbfbb2.chunk.js",
+    "main.js.map": "/pokemon-db/static/js/main.8afbfbb2.chunk.js.map",
+    "runtime-main.js": "/pokemon-db/static/js/runtime-main.83d126aa.js",
+    "runtime-main.js.map": "/pokemon-db/static/js/runtime-main.83d126aa.js.map",
+    "static/js/2.781d87f3.chunk.js": "/pokemon-db/static/js/2.781d87f3.chunk.js",
+    "static/js/2.781d87f3.chunk.js.map": "/pokemon-db/static/js/2.781d87f3.chunk.js.map",
+    "index.html": "/pokemon-db/index.html",
+    "precache-manifest.dcc0e29e88ece52e8f158b9ec24e4992.js": "/pokemon-db/precache-manifest.dcc0e29e88ece52e8f158b9ec24e4992.js",
+    "service-worker.js": "/pokemon-db/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/pokemon-db/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.781d87f3.chunk.js.LICENSE.txt": "/pokemon-db/static/js/2.781d87f3.chunk.js.LICENSE.txt",
+    "static/media/bug.png": "/pokemon-db/static/media/bug.b3d23c0c.png",
+    "static/media/dark.png": "/pokemon-db/static/media/dark.43fad52b.png",
+    "static/media/dragon.png": "/pokemon-db/static/media/dragon.3c95d051.png",
+    "static/media/electric.png": "/pokemon-db/static/media/electric.a640e222.png",
+    "static/media/fairy.png": "/pokemon-db/static/media/fairy.d882ac5f.png",
+    "static/media/fighting.png": "/pokemon-db/static/media/fighting.94e1c660.png",
+    "static/media/fire.png": "/pokemon-db/static/media/fire.eac89c9a.png",
+    "static/media/flying.png": "/pokemon-db/static/media/flying.31e9a60b.png",
+    "static/media/ghost.png": "/pokemon-db/static/media/ghost.c3242dce.png",
+    "static/media/grass.png": "/pokemon-db/static/media/grass.2b9b1bfc.png",
+    "static/media/ground.png": "/pokemon-db/static/media/ground.f3a61fdc.png",
+    "static/media/ice.png": "/pokemon-db/static/media/ice.d03edb7e.png",
+    "static/media/normal.png": "/pokemon-db/static/media/normal.47d2e7b2.png",
+    "static/media/psycic.png": "/pokemon-db/static/media/psycic.f4486dcb.png",
+    "static/media/rock.png": "/pokemon-db/static/media/rock.c6a84bf6.png",
+    "static/media/steel.png": "/pokemon-db/static/media/steel.00b3109a.png",
+    "static/media/water.png": "/pokemon-db/static/media/water.e43fbc98.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83d126aa.js",
+    "static/js/2.781d87f3.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.8afbfbb2.chunk.js"
+  ]
+}
