@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/pokemon-db/static/css/main.5f361e03.chunk.css",
-    "main.js": "/pokemon-db/static/js/main.4c7855eb.chunk.js",
-    "main.js.map": "/pokemon-db/static/js/main.4c7855eb.chunk.js.map",
+    "main.js": "/pokemon-db/static/js/main.cdeb6bde.chunk.js",
+    "main.js.map": "/pokemon-db/static/js/main.cdeb6bde.chunk.js.map",
     "runtime-main.js": "/pokemon-db/static/js/runtime-main.83d126aa.js",
     "runtime-main.js.map": "/pokemon-db/static/js/runtime-main.83d126aa.js.map",
-    "static/js/2.781d87f3.chunk.js": "/pokemon-db/static/js/2.781d87f3.chunk.js",
-    "static/js/2.781d87f3.chunk.js.map": "/pokemon-db/static/js/2.781d87f3.chunk.js.map",
+    "static/js/2.f9c0cd1c.chunk.js": "/pokemon-db/static/js/2.f9c0cd1c.chunk.js",
+    "static/js/2.f9c0cd1c.chunk.js.map": "/pokemon-db/static/js/2.f9c0cd1c.chunk.js.map",
     "index.html": "/pokemon-db/index.html",
-    "precache-manifest.e8af3b823fa82f023c6ea5e0e54ae713.js": "/pokemon-db/precache-manifest.e8af3b823fa82f023c6ea5e0e54ae713.js",
+    "precache-manifest.17d8fc32b1cd2d50440c557000caa2a9.js": "/pokemon-db/precache-manifest.17d8fc32b1cd2d50440c557000caa2a9.js",
     "service-worker.js": "/pokemon-db/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/pokemon-db/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.781d87f3.chunk.js.LICENSE.txt": "/pokemon-db/static/js/2.781d87f3.chunk.js.LICENSE.txt",
+    "static/js/2.f9c0cd1c.chunk.js.LICENSE.txt": "/pokemon-db/static/js/2.f9c0cd1c.chunk.js.LICENSE.txt",
     "static/media/bug.png": "/pokemon-db/static/media/bug.b3d23c0c.png",
     "static/media/dark.png": "/pokemon-db/static/media/dark.43fad52b.png",
     "static/media/dragon.png": "/pokemon-db/static/media/dragon.3c95d051.png",
@@ -32,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.83d126aa.js",
-    "static/js/2.781d87f3.chunk.js",
+    "static/js/2.f9c0cd1c.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.4c7855eb.chunk.js"
+    "static/js/main.cdeb6bde.chunk.js"
   ]
 }
