@@ -89,7 +89,11 @@ export default function Navbar() {
   const handleBtn = () => {
     setName("");
   };
-
+  const onSubmit = (e) => {
+    e.preventDefault();
+    history.push(`/pokemon-db/pokemon/${name}`);
+    setName("");
+  };
   const handleHome = () => {
     history.push("/pokemon-db/1");
   };
@@ -103,7 +107,8 @@ export default function Navbar() {
             edge="start"
             className={classes.menuButton}
             color="inherit"
-            aria-label="open drawer">
+            aria-label="open drawer"
+          >
             <HomeIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
@@ -113,23 +118,26 @@ export default function Navbar() {
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
-            <InputBase
-              value={name}
-              onChange={handleChange}
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-            <Button
-              className={classes.searchBtn}
-              onClick={handleBtn}
-              component={Link}
-              to={`/pokemon-db/pokemon/${name}`}>
-              Search
-            </Button>
+            <form noValidate autoComplete="off" onSubmit={onSubmit}>
+              <InputBase
+                value={name}
+                onChange={handleChange}
+                placeholder="Search…"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput,
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+              <Button
+                className={classes.searchBtn}
+                onClick={handleBtn}
+                component={Link}
+                to={`/pokemon-db/pokemon/${name}`}
+              >
+                Search
+              </Button>
+            </form>
           </div>
         </Toolbar>
       </AppBar>
